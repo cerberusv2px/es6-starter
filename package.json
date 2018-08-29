@@ -4,7 +4,10 @@
   "description": "Learning with express-api-es6-starter architecture",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "seed": "knex seed:run --knexfile src/knexfile.js",
+    "rollback": "knex migrate:rollback --knexfile src/knexfile.js",
+    "latest": "knex migrate:latest --knexfile src/knexfile.js"
   },
   "author": "",
   "license": "ISC",
