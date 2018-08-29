@@ -1,0 +1,9 @@
+knex migrate:make create_user_and_todo_tables
+
+knex seed:make 01_users
+knex seed:make 02_todos
+
+knex migrate:rollback
+knex migrate:latest
+
+knex seed:run
